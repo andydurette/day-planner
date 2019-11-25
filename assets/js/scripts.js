@@ -73,4 +73,13 @@ localStorage.setItem('timeTrackObject', JSON.stringify(timeTrackObject));
 
 });
 
+// 7.Button to clear all data currently corrected.
+
+$("body").on('click', "#clearData", function(e){
+  localStorage.setItem('timeTrackObject', "");
+  $(".time-block").each(function(){
+    $(this).find(".description textarea").val('');
+  });
+});
+
 });
